@@ -1,0 +1,25 @@
+class demo{
+    public static void pattern(int n){
+        int count =1;
+        for(int i=1;i<=n;i++){
+            if(i%2!=0){
+                for(int j=1;j<=4;j++) {
+                    System.out.print(count + " ");
+                    count++;
+                }
+            }
+            else{
+        int temp=count;
+        for(int j=count+3;j>=temp;j--){
+            count++;
+            System.out.print(j+" ");
+        }
+            }
+            System.out.println("");
+        }
+    }
+    public static void main(String []args){
+        int x=5;
+        pattern(x);
+    }
+}
