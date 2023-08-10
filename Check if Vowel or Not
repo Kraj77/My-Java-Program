@@ -1,0 +1,27 @@
+class demo{
+    public static void main(String []args){
+        String s="qwrti";
+        char ca = 'a';
+        char ce = 'e';
+        char ci= 'i';
+        char co = 'o';
+        char cu = 'u';
+       String l= s.toLowerCase();
+
+        int length=0;
+        for(int i=0;i<l.length();i++) {
+            char c = l.charAt(i);
+
+           if(c==ca||c==ce||c==ci||c==co||c==cu){
+                length++;
+           }
+        }
+           if(length>0){
+               System.out.println("Vowel");
+           }
+           else{
+               System.out.println("NOT a Vowel");
+           }
+
+        }
+    }
