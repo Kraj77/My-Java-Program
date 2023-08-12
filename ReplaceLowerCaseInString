@@ -1,0 +1,6 @@
+class demo{
+    public static void main(String []args){
+        String str= "abc ABC 123 abc";
+        System.out.println(str.replaceAll("([a-z])",""));
+    }
+}
