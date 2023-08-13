@@ -1,0 +1,43 @@
+public class TrafficLight {
+        String color;
+        int duration;
+
+        public TrafficLight(String color,int duration){
+            this.color = color;
+            this.duration=duration;
+        }
+
+        public void change_color(String color){
+            this.color=color;
+        }
+        public String getColor(){
+            return color;
+        }
+        public int getDuration(){
+            return duration;
+        }
+        public void check_color(){
+            if(this.color=="red"){
+                System.out.println("color is red");
+            }
+            if(this.color == "green"){
+                System.out.println("color is green");
+            }
+        }
+        public void get_details(){
+            System.out.println("The color of traffic light is "+color +" "+ "& the duration is "+duration+" seconds");
+        }
+
+}
+----------------------------------------------Main--------------------------------------------------------
+class demo{
+    public static void main(String []args){
+        TrafficLight tfl = new TrafficLight("red",10);
+        tfl.check_color();
+        tfl.change_color("green");
+        tfl.check_color();
+        TrafficLight tfl1 = new TrafficLight("green",20);
+        tfl.get_details();
+        tfl1.get_details();
+    }
+}
