@@ -1,0 +1,57 @@
+import java.util.ArrayList;
+
+public class Student {
+
+    String name;
+    String grade;
+    ArrayList<String> courses;
+
+    public Student(String name,String grade){
+        this.name=name;
+        this.grade=grade;
+        this.courses=new ArrayList<String>();
+    }
+
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name =name;
+    }
+    public String getGrade(){
+        return grade;
+    }
+    public void setGrade(String grade){
+        this.grade=grade;
+    }
+    public ArrayList<String> getCourses(){
+        return courses;
+    }
+    public void add_courses(String course){
+        courses.add(course);
+    }
+    public void remove_courses(String course){
+        courses.remove(course);
+    }
+    public  void details(){
+        System.out.println("The name of Student is "+name+ " "+"& grade is "+grade);
+    }
+
+
+}
+-----------------------------Main--------------------------------------------------------
+class demo{
+    public static void main(String []args){
+        Student st1 = new Student("Mohan","A++");
+        st1.add_courses("Math");
+        st1.add_courses("English");
+        Student st2 = new Student("Ram","B++");
+        st2.add_courses("Hindi");
+        st2.add_courses("Science");
+
+        System.out.println(st1.getCourses());
+        st1.details();
+        st2.details();
+        System.out.println(st2.getCourses());
+    }
+}
