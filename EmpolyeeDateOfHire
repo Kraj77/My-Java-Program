@@ -1,0 +1,55 @@
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+public class NewEmployee {
+    String name;
+    int salary;
+    LocalDate hireDate;
+
+    public NewEmployee(String name,int salary,LocalDate hireDate){
+        this.name =name;
+        this.salary=salary;
+        this.hireDate =hireDate;
+    }
+
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name =name;
+    }
+
+    public int getSalary(){
+        return salary;
+    }
+
+    public void setSalary(int salary){
+        this.salary=salary;
+    }
+    public LocalDate getHireDate(){
+        return hireDate;
+    }
+    public void setHireDate(LocalDate hireDate){
+        this.hireDate=hireDate;
+    }
+
+    public void yearOfService(){
+        System.out.println( Period.between(hireDate, LocalDate.now()).getYears());
+    }
+    public void details(){
+        System.out.println("The name of employee is "+name+",the salary is "+salary+ " & the hired date is is "+hireDate);
+    }
+}
+--------------------------------------Main--------------------------------------
+import java.time.LocalDate;
+import java.time.Period;
+class demo{
+    public static void main(String []args){
+        NewEmployee ne= new NewEmployee("john",40000, LocalDate.parse("2021-04-01"));
+
+        System.out.println(ne.getSalary());
+        ne.yearOfService();
+            ne.setName("Mohan");
+        ne.details();
+    }
+}
