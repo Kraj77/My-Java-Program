@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+class AddNumber{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int rem = 0;
+        int ans =0;
+        System.out.println("Enter the number: ");
+        int n = sc.nextInt();
+        int temp = n;
+        while (temp != 0) {
+
+            rem = temp % 10;
+            ans +=rem;
+            temp = temp / 10;
+        }
+        System.out.println(ans);
+    }
+}
