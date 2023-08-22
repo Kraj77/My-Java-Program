@@ -1,0 +1,56 @@
+public class Bank{
+    String name;
+    int account_no;
+    int money;
+
+    public Bank(String name,int account_no,int money){
+        this.name = name;
+        this.account_no=account_no;
+        this.money=money;
+    }
+
+    public String getName(){
+
+        return name;
+    }
+
+    public void setName(String name){
+
+        this.name=name;
+    }
+    public int getAccount_no(){
+
+        return account_no;
+    }
+    public void setAccount_no(int account_no){
+        this.account_no=account_no;
+    }
+    public int getMoney(){
+
+        return money;
+    }
+   public int depositMoney(int amount){
+         money+=amount;
+         return money;
+   }
+   public int withdrawMoney(int amount){
+        money=money-amount;
+        return money;
+   }
+   public void get_details(){
+       System.out.println("Name of person is "+name+" the account no is "+account_no+" & the balance is "+money);
+   }
+
+}
+--------------------------Main-----------------------------------
+class demo{
+    public static void main(String []args){
+        Bank bk1 = new Bank("John",654321,40000);
+        Bank bk2 = new Bank("Alex",78901,54000);
+        System.out.println(bk1.getAccount_no());
+        bk1.depositMoney(3000);
+        System.out.println(bk1.getMoney());
+        bk1.get_details();
+        bk2.get_details();
+    }
+}
