@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class ArrayPrac {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Size: ");
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        int temp[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("Enter the elements: ");
+            a[i] = sc.nextInt();
+        }
+        int target = sc.nextInt();
+        int count=0;
+        for (int i = 0; i < n; i++) {
+            if(target !=a[i]){
+                 count++;
+                 temp[i]=a[i];
+            }
+            else
+                temp[i]= 0;
+        }
+        System.out.println(count);
+        for(int i=0;i<n;i++){
+            System.out.print(temp[i]+",");
+        }
+    }
+}
