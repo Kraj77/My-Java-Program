@@ -1,0 +1,22 @@
+import java.util.*;
+class ArraySecMax{
+    public static void main(String[] args) {
+        int a[]={10,20,12,34,56,88,77};
+        int i=0,j=a.length-1;
+        System.out.println(Arrays.toString(a));
+        while(i<=j){
+            swap(i,j,a);
+            i++;
+            j--;
+
+        }
+        System.out.println(Arrays.toString(a));
+
+    }
+    public static void swap(int i,int j,int a[]){
+        int temp=a[i];
+        a[i]=a[j];
+        a[j]=temp;
+    }
+
+    }
