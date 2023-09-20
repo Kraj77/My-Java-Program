@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Area {
+    int length;
+    int breadth;
+
+    Area(){
+        this.length=length;
+        this.breadth=breadth;
+    }
+
+    public void setDim(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println(getArea(length = sc.nextInt(),breadth=sc.nextInt()));
+    }
+    public int getArea(int length,int breadth){
+        int res=length*breadth;
+        return res;
+    }
+
+    public static void main(String[] args) {
+        Area ar = new Area();
+        ar.setDim();
+    }
+}
