@@ -1,0 +1,26 @@
+public class Student {
+    String name;
+    int roll_no;
+
+    Student(){
+        this.name=name;
+        this.roll_no=roll_no;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public void setRoll_no(int roll_no){
+        this.roll_no=roll_no;
+    }
+    public void display(){
+        System.out.println("The name of Student is: "+name);
+        System.out.println("The roll no of Student is: "+roll_no);
+    }
+
+    public static void main(String[] args) {
+        Student st = new Student();
+        st.setName("john");
+        st.setRoll_no(2);
+        st.display();
+    }
+}
